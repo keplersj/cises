@@ -1,2 +1,27 @@
-{}
-
+{
+  "name": "cises",
+  "description": "A browser extension that incrementally improves on the University of Utah CIS experience.",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Kepler Sticka-Jones",
+    "email": "kepler@stickajones.org",
+    "url": "https://keplersj.org"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "husky": "^1.3.1"
+  }
+}
