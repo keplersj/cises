@@ -1,4 +1,7 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import { getProfessorFromSchool } from "./lib/rmp";
+import { ScheduleBuilderRMP } from "./views/schedule_builder_rmp";
 
 const schoolName = "University of Utah";
 
@@ -17,12 +20,28 @@ async function getProfessorFromScheduleClassModal() {
   return undefined;
 }
 
+async function renderProfInfoInModal() {
+  const professor = await getProfessorFromScheduleClassModal();
+
+  if (professor) {
+    const container = document.querySelector(
+      ".modal-body > div:nth-child(1) > div:nth-child(2)"
+    );
+    const rmpComponentContainer = document.createElement("div");
+    ReactDOM.render(
+      <ScheduleBuilderRMP professor={professor} />,
+      rmpComponentContainer
+    );
+    container && container.appendChild(rmpComponentContainer);
+  }
+}
+
 const bodyObserver = new MutationObserver(mutationsList => {
   for (var mutation of mutationsList) {
     if (mutation.type == "childList") {
       mutation.addedNodes.forEach(node => {
         if ((node as Element).id === "base-modal") {
-          getProfessorFromScheduleClassModal().then(console.log);
+          renderProfInfoInModal();
         }
       });
     }

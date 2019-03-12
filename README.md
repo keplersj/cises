@@ -6,7 +6,10 @@ A browser extension that incrementally improves on the University of Utah CIS ex
 
 ## Features
 
-- (Planned) Rate My Professor Integration in Schedule Builder
+- Rate My Professor Integration in Schedule Builder
+
+## Planned Features
+
 - (Planned) Rate My Professor Intergration in Class Checkout/Registration
 - (Planned) Google Calendar export for class registration
 - (Planned) CIS Search
