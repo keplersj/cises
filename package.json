@@ -17,7 +17,11 @@
   "renovate": {
     "extends": [
       "config:base"
-    ]
+    ],
+    "automerge": false,
+    "patch": {
+      "automerge": true
+    }
   },
   "commitlint": {
     "extends": [
