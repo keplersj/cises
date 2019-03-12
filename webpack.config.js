@@ -2,7 +2,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    background: "./src/background.ts",
     "college-scheduler": "./src/college-scheduler.tsx"
   },
 
