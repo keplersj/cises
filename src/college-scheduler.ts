@@ -1,36 +1,37 @@
-import queryString from "query-string";
+import { getProfessorFromSchool } from "./lib/rmp";
 
-async function getProfessorFromSchool(teacherName: string, schoolName: string) {
-  const query = queryString.stringify({
-    bf: "pow(total_number_of_ratings_i,2.1)",
-    callback: "noCB",
-    defType: "edismax",
-    fq: `schoolname_t:"${schoolName}"`,
-    group: "off",
-    "group.field": "content_type_s",
-    "group.limit": "20",
-    "json.wrf": "noCB",
-    q: teacherName,
-    qf:
-      "teacherfirstname_t^2000 teacherlastname_t^2000 teacherfullname_t^2000 teacherfullname_autosuggest",
-    rows: ["20", "20"],
-    siteName: "rmp",
-    solrformat: "true",
-    sort: "score desc",
-    wt: "json"
-  });
+const schoolName = "University of Utah";
 
-  const res = await fetch(
-    `https://search-production.ratemyprofessors.com/solr/rmp/select/?${query}`
+async function getProfessorFromScheduleClassModal() {
+  const elements = document.querySelectorAll(
+    "html body.static-header.modal-open div#base-modal.modal.fade.center-lg.in div.modal-dialog.modal-lg div.modal-content div.modal-body div.row div.col-md-6 ul.section-details li.persist"
   );
 
-  function noCB(obj: any) {
-    return obj;
+  for (let element of elements) {
+    if ((element as HTMLElement).innerText.match(/Instructor: /)) {
+      const name = ((element as HTMLElement).lastChild as Text).data;
+      return await getProfessorFromSchool(name, schoolName);
+    }
   }
 
-  const { response } = eval(await res.text());
-
-  return response.docs[0];
+  return undefined;
 }
 
-// html body.static-header.modal-open div#base-modal.modal.fade.center-lg.in div.modal-dialog.modal-lg div.modal-content div.modal-body div.row div.col-md-6 ul.section-details li.persist
+const bodyObserver = new MutationObserver(mutationsList => {
+  for (var mutation of mutationsList) {
+    if (mutation.type == "childList") {
+      mutation.addedNodes.forEach(node => {
+        if ((node as Element).id === "base-modal") {
+          getProfessorFromScheduleClassModal().then(console.log);
+        }
+      });
+    }
+  }
+});
+
+// Start observing the target node for configured mutations
+bodyObserver.observe(document.body, {
+  attributes: false,
+  childList: true,
+  subtree: false
+});
