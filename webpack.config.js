@@ -8,7 +8,7 @@ module.exports = {
   output: {
     // This copies each source entry into the extension dist folder named
     // after its entry config key.
-    path: __dirname + "/dist",
+    path: __dirname + "/build",
     filename: "[name].js"
   },
 

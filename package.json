@@ -41,6 +41,45 @@
       "@commitlint/config-conventional"
     ]
   },
+  "release": {
+    "verifyConditions": [
+      "semantic-release-chrome",
+      "semantic-release-firefox",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      {
+        "path": "semantic-release-chrome",
+        "asset": "dist/cis-enhancement-suite_chrome.zip",
+        "distFolder": "build"
+      },
+      {
+        "path": "semantic-release-firefox",
+        "xpiPath": "dist/cis-enhancement-suite_firefox.xpi",
+        "distFolder": "build"
+      }
+    ],
+    "publish": [
+      {
+        "path": "semantic-release-chrome",
+        "asset": "dist/my-extension.zip",
+        "extensionId": "mppjhhbajcciljocgbadbhbgphjfdmhj"
+      },
+      {
+        "path": "semantic-release-firefox",
+        "xpiPath": "dist/my-extension.xpi",
+        "addOnSlug": "my-extension"
+      },
+      {
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "dist/**"
+          }
+        ]
+      }
+    ]
+  },
   "dependencies": {
     "@emotion/core": "10.0.9",
     "@emotion/styled": "10.0.9",
@@ -73,6 +112,9 @@
     "lint-staged": "8.1.5",
     "prettier": "1.16.4",
     "react-test-renderer": "16.8.4",
+    "semantic-release": "^15.13.3",
+    "semantic-release-chrome": "^1.1.0",
+    "semantic-release-firefox": "^1.2.0",
     "source-map-loader": "0.2.4",
     "typescript": "3.3.3333",
     "web-ext-types": "3.1.0",
