@@ -90,8 +90,8 @@ export const ScheduleBuilderRMP = ({ professor }: Props) => (
     <strong>Tags:</strong>
     <br />
     <TagContainer>
-      {professor.tag_s_mv.map(tag => (
-        <Tag>{tag}</Tag>
+      {professor.tag_s_mv.map((tag, index) => (
+        <Tag key={index}>{tag}</Tag>
       ))}
     </TagContainer>
   </Container>
