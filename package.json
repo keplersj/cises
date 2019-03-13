@@ -24,6 +24,9 @@
     "automerge": false,
     "patch": {
       "automerge": true
+    },
+    "pin": {
+      "automerge": true
     }
   },
   "commitlint": {
