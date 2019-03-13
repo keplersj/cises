@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schedule Builder - Rate My Professor Component matches snapshot when provdided with valid data 1`] = `
+.emotion-5 {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #c0c0c0;
+  color: #ffffff;
+}
+
+.emotion-0 {
+  font-weight: 900;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:active {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  background-color: #a0a0a0;
+  margin: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+<div
+  className="emotion-5"
+  id="cises-rmp"
+>
+  <a
+    className="emotion-0"
+    href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2"
+  >
+    Info from Rate My Professors:
+  </a>
+  <br />
+  <strong>
+    Average Rating: 
+  </strong>
+  <span>
+    2
+  </span>
+  <br />
+  <strong>
+    Tags:
+  </strong>
+  <br />
+  <div
+    className="emotion-4"
+  >
+    <span
+      className="emotion-1"
+    >
+      
+    </span>
+    <span
+      className="emotion-1"
+    >
+      
+    </span>
+    <span
+      className="emotion-1"
+    >
+      
+    </span>
+  </div>
+</div>
+`;
