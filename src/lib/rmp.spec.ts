@@ -1,5 +1,4 @@
 import * as rmp from "./rmp";
-import { jsxAttribute } from "@babel/types";
 
 describe("Rate My Professors", () => {
   describe("getProfessorFromSchool", () => {
