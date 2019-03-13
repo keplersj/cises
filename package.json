@@ -63,12 +63,12 @@
       {
         "path": "semantic-release-chrome",
         "asset": "dist/cis-enhancement-suite_chrome.zip",
-        "extensionId": ""
+        "extensionId": "pebfiklbcoioidmjoelliojmfamipfnn"
       },
       {
         "path": "semantic-release-firefox",
         "xpiPath": "dist/cis-enhancement-suite_firefox.xpi",
-        "addOnSlug": ""
+        "addOnSlug": "cis-enhancement-suite"
       },
       {
         "path": "@semantic-release/github",
