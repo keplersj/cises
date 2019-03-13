@@ -34,7 +34,8 @@ module.exports = {
       { from: "./src/manifest.json", to: "./manifest.json" },
       { from: "./assets/icon.svg", to: "./icon.svg" },
       { from: "./assets/icon-128.png", to: "./icon-128.png" },
-      { from: "./assets/icon-256.png", to: "./icon-256.png" }
+      { from: "./assets/icon-48.png", to: "./icon-48.png" },
+      { from: "./assets/icon-16.png", to: "./icon-16.png" }
     ])
   ]
 };
