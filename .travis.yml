@@ -13,7 +13,7 @@ jobs:
       script:
         - npm test
       after_success:
-        - npx codecov
+        - bash <(curl -s https://codecov.io/bash)
     # - stage: release
     #   script:
     #     - npm run semantic-release
