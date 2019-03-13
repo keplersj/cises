@@ -13,5 +13,13 @@
       "matches": ["https://utah.collegescheduler.com/*"],
       "js": ["college-scheduler.js"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "96": "icon.svg",
+    "128": "icon-128.png",
+    "256": "icon-256.png"
+  }
 }
