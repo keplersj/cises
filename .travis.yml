@@ -8,6 +8,7 @@ jobs:
   include:
     - stage: lint
       script:
+        - prettier --check "**/*.{js, jsx, ts, tsx, json, css, md}"
         - commitlint-travis
     - stage: test
       script:
