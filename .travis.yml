@@ -1,8 +1,26 @@
 language: node_js
+
 node_js:
   - node
   - lts/*
-script:
-  - commitlint-travis
-  - npm test
-  - npx codecov
+
+jobs:
+  include:
+    - stage: lint
+      script:
+        - commitlint-travis
+    - stage: test
+      script:
+        - npm test
+      after_success:
+        - npx codecov
+    # - stage: release
+    #   script:
+    #     - npm run semantic-release
+    #   after_sucess: skip
+
+stages:
+  - lint
+  - test
+  # - name: release
+  #   if: branch = master AND type = push AND fork = false
