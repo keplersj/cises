@@ -68,7 +68,8 @@
       {
         "path": "semantic-release-firefox",
         "xpiPath": "dist/cis-enhancement-suite_firefox.xpi",
-        "addOnSlug": "cis-enhancement-suite"
+        "addOnSlug": "cis-enhancement-suite",
+        "notesToReviewer": "This add-on makes use of content scripts to add functionality to the class registration page for University of Utah students. The extension is fully open source and can be viewed on GitHub (https://github.com/keplersj/cises)."
       },
       {
         "path": "@semantic-release/github",
