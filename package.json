@@ -63,17 +63,6 @@
     ],
     "publish": [
       {
-        "path": "@semantic-release/github",
-        "assets": [
-          {
-            "path": "cis-enhancement-suite_chrome.zip"
-          },
-          {
-            "path": "cis-enhancement-suite_firefox.xpi"
-          }
-        ]
-      },
-      {
         "path": "semantic-release-firefox",
         "xpiPath": "cis-enhancement-suite_firefox.xpi",
         "addOnSlug": "cis-enhancement-suite",
@@ -83,6 +72,17 @@
         "path": "semantic-release-chrome",
         "asset": "cis-enhancement-suite_chrome.zip",
         "extensionId": "pebfiklbcoioidmjoelliojmfamipfnn"
+      },
+      {
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "cis-enhancement-suite_chrome.zip"
+          },
+          {
+            "path": "cis-enhancement-suite_firefox.xpi"
+          }
+        ]
       }
     ]
   },
