@@ -10,6 +10,8 @@
     "url": "https://keplersj.org"
   },
   "scripts": {
+    "clean": "rimraf build coverage cis-enhancement-suite_chrome.zip cis-enhancement-suite_firefox.xpi",
+    "build": "webpack",
     "test": "jest"
   },
   "husky": {
@@ -116,6 +118,7 @@
     "lint-staged": "8.1.5",
     "prettier": "1.16.4",
     "react-test-renderer": "16.8.4",
+    "rimraf": "^2.6.3",
     "semantic-release": "15.13.3",
     "semantic-release-chrome": "1.1.0",
     "semantic-release-firefox": "1.2.0",
