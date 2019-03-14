@@ -90,7 +90,7 @@
     "@emotion/core": "10.0.9",
     "@emotion/styled": "10.0.9",
     "emotion": "10.0.9",
-    "query-string": "6.3.0",
+    "query-string": "6.4.0",
     "react": "16.8.4",
     "react-dom": "16.8.4"
   },
