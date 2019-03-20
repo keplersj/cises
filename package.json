@@ -43,6 +43,21 @@
       "@commitlint/config-conventional"
     ]
   },
+  "jest": {
+    "automock": false,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "json",
+      "text"
+    ],
+    "setupFiles": [
+      "./setupJest.ts"
+    ],
+    "snapshotSerializers": [
+      "jest-emotion"
+    ]
+  },
   "release": {
     "verifyConditions": [
       "semantic-release-chrome",
