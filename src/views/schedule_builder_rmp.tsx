@@ -1,41 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-type Professor = {
-  city_state_s: string;
-  averageratingscore_rf: number;
-  pk_id: number;
-  schoolcity_s: string;
-  schoolstate_full_s: string;
-  pict_thumb_name_s: string;
-  id: string;
-  pageviews_i: number;
-  averagehelpfulscore_rf: number;
-  schoolcountry_s: string;
-  schoolname_s: string;
-  status_i: number;
-  teachermiddlename_t: string;
-  averagehotscore_rf: number;
-  schoolstate_s: string;
-  rated_date_dt: string;
-  teacherfullname_s: string;
-  teacherdepartment_s: string;
-  total_number_of_ratings_i: number;
-  visible_i: number;
-  content_type_s: string;
-  averageeasyscore_rf: number;
-  schoolid_s: string;
-  teacherfirstname_t: string;
-  teacherlastname_t: string;
-  averageclarityscore_rf: number;
-  schoolwebpage_s: string;
-  timestamp: string;
-  tag_s_mv: string[];
-  tag_id_s_mv: string[];
-};
-
 interface Props {
-  professor: Professor;
+  rmpId: number;
+  rating: number;
+  tags: string[];
 }
 
 const Container = styled.div`
@@ -74,23 +43,21 @@ const Tag = styled.span`
   padding-right: 1px;
 `;
 
-export const ScheduleBuilderRMP = ({ professor }: Props) => (
+export const ScheduleBuilderRMP = ({ rmpId, rating, tags }: Props) => (
   <Container id="cises-rmp">
     <HeaderLink
-      href={`https://www.ratemyprofessors.com/ShowRatings.jsp?tid=${
-        professor.pk_id
-      }`}
+      href={`https://www.ratemyprofessors.com/ShowRatings.jsp?tid=${rmpId}`}
     >
       Info from Rate My Professors:
     </HeaderLink>
     <br />
     <strong>Average Rating: </strong>
-    <span>{professor.averageratingscore_rf}</span>
+    <span>{rating}</span>
     <br />
     <strong>Tags:</strong>
     <br />
     <TagContainer>
-      {professor.tag_s_mv.map((tag, index) => (
+      {tags.map((tag, index) => (
         <Tag key={index}>{tag}</Tag>
       ))}
     </TagContainer>

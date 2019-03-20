@@ -29,7 +29,11 @@ async function renderProfInfoInModal() {
     );
     const rmpComponentContainer = document.createElement("div");
     ReactDOM.render(
-      <ScheduleBuilderRMP professor={professor} />,
+      <ScheduleBuilderRMP
+        rmpId={professor.pk_id}
+        rating={professor.averageratingscore_rf}
+        tags={professor.tag_s_mv}
+      />,
       rmpComponentContainer
     );
     container && container.appendChild(rmpComponentContainer);
