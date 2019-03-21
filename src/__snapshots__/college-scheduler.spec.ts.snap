@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`College Scheduler Content Script injects our component into the document when the \`#base-modal\` element is created 1`] = `<body />`;
+
+exports[`College Scheduler Content Script injects our component into the document when the \`#base-modal\` element is created 2`] = `
+.emotion-5 {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #c0c0c0;
+  color: #ffffff;
+}
+
+.emotion-0 {
+  font-weight: 900;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:active {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  background-color: #a0a0a0;
+  margin: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+<body
+  class="static-header modal-open"
+>
+  <div
+    class="modal fade center-lg in"
+    id="base-modal"
+  >
+    
+        
+    <div
+      class="modal-dialog modal-lg"
+    >
+      
+            
+      <div
+        class="modal-content"
+      >
+        
+                
+        <div
+          class="modal-body"
+        >
+          
+                    
+          <div
+            class="row"
+          >
+            
+                        
+            <div
+              class="col-md-6"
+            >
+              
+                            
+              <ul
+                class="section-details"
+              >
+                
+                                
+                <li
+                  class="persist"
+                >
+                  
+                                    
+                  <strong>
+                    Instructor:
+                  </strong>
+                   Name McNamey
+                                
+                </li>
+                
+                            
+              </ul>
+              
+                        
+            </div>
+            
+                        
+            <div
+              class="col-md-6"
+            >
+              
+                            
+                        
+              <div>
+                <div
+                  class="emotion-5"
+                  id="cises-rmp"
+                >
+                  <a
+                    class="emotion-0"
+                    href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2"
+                  >
+                    Info from Rate My Professors:
+                  </a>
+                  <br />
+                  <strong>
+                    Average Rating: 
+                  </strong>
+                  <span>
+                    2
+                  </span>
+                  <br />
+                  <strong>
+                    Tags:
+                  </strong>
+                  <br />
+                  <div
+                    class="emotion-4"
+                  >
+                    <span
+                      class="emotion-1"
+                    />
+                    <span
+                      class="emotion-1"
+                    />
+                    <span
+                      class="emotion-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+                    
+          </div>
+          
+                
+        </div>
+        
+            
+      </div>
+      
+        
+    </div>
+    
+    
+  </div>
+</body>
+`;

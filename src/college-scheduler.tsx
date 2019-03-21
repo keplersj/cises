@@ -11,8 +11,8 @@ async function getProfessorFromScheduleClassModal() {
   );
 
   for (let element of elements) {
-    if ((element as HTMLElement).innerText.match(/Instructor: /)) {
-      const name = ((element as HTMLElement).lastChild as Text).data;
+    if ((element as HTMLLIElement).innerHTML.match(/Instructor:/)) {
+      const name = ((element as HTMLLIElement).lastChild as Text).data;
       return await getProfessorFromSchool(name, schoolName);
     }
   }
@@ -43,9 +43,9 @@ async function renderProfInfoInModal() {
 const bodyObserver = new MutationObserver(mutationsList => {
   for (var mutation of mutationsList) {
     if (mutation.type == "childList") {
-      mutation.addedNodes.forEach(node => {
+      mutation.addedNodes.forEach(async node => {
         if ((node as Element).id === "base-modal") {
-          renderProfInfoInModal();
+          await renderProfInfoInModal();
         }
       });
     }
