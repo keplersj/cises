@@ -1,10 +1,12 @@
 import "./college-scheduler";
-import { classBody } from "@babel/types";
 
 describe("College Scheduler Content Script", () => {
   beforeEach(() => {
     fetchMock.resetMocks();
+    document.body.innerHTML = "";
+    document.body.className = "";
   });
+
   it("injects our component into the document when the `#base-modal` element is created", cb => {
     expect(document.body).toMatchSnapshot();
 
@@ -72,6 +74,42 @@ describe("College Scheduler Content Script", () => {
     setTimeout(() => {
       expect(document.body).toMatchSnapshot();
       expect(document.querySelector("#cises-rmp")).toBeTruthy();
+      cb();
+    });
+  });
+
+  it("does not inject our component if Schedule Builder doesn't include an instructor in `#base-modal`", cb => {
+    expect(document.body).toMatchSnapshot();
+
+    const baseModal = document.createElement("div");
+    baseModal.id = "base-modal";
+    baseModal.className = "modal fade center-lg in";
+    baseModal.innerHTML = `
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="section-details">
+                                <li class="persist">
+                                    <strong>Class Section:</strong> FAKE 1234
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.className = "static-header modal-open";
+    document.body.appendChild(baseModal);
+
+    setTimeout(() => {
+      expect(document.body).toMatchSnapshot();
+      expect(document.querySelector("#cises-rmp")).toBeNull();
       cb();
     });
   });

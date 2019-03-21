@@ -1,6 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`College Scheduler Content Script injects our component into the document when the \`#base-modal\` element is created 1`] = `<body />`;
+exports[`College Scheduler Content Script does not inject our component if Schedule Builder doesn't include an instructor in \`#base-modal\` 1`] = `
+<body
+  class=""
+/>
+`;
+
+exports[`College Scheduler Content Script does not inject our component if Schedule Builder doesn't include an instructor in \`#base-modal\` 2`] = `
+<body
+  class="static-header modal-open"
+>
+  <div
+    class="modal fade center-lg in"
+    id="base-modal"
+  >
+    
+        
+    <div
+      class="modal-dialog modal-lg"
+    >
+      
+            
+      <div
+        class="modal-content"
+      >
+        
+                
+        <div
+          class="modal-body"
+        >
+          
+                    
+          <div
+            class="row"
+          >
+            
+                        
+            <div
+              class="col-md-6"
+            >
+              
+                            
+              <ul
+                class="section-details"
+              >
+                
+                                
+                <li
+                  class="persist"
+                >
+                  
+                                    
+                  <strong>
+                    Class Section:
+                  </strong>
+                   FAKE 1234
+                                
+                </li>
+                
+                            
+              </ul>
+              
+                        
+            </div>
+            
+                        
+            <div
+              class="col-md-6"
+            >
+              
+                            
+                        
+            </div>
+            
+                    
+          </div>
+          
+                
+        </div>
+        
+            
+      </div>
+      
+        
+    </div>
+    
+    
+  </div>
+</body>
+`;
+
+exports[`College Scheduler Content Script injects our component into the document when the \`#base-modal\` element is created 1`] = `
+<body
+  class=""
+/>
+`;
 
 exports[`College Scheduler Content Script injects our component into the document when the \`#base-modal\` element is created 2`] = `
 .emotion-5 {
