@@ -83,11 +83,6 @@
         "path": "semantic-release-chrome",
         "asset": "cis-enhancement-suite_chrome.zip",
         "distFolder": "build"
-      },
-      {
-        "path": "semantic-release-firefox",
-        "xpiPath": "cis-enhancement-suite_firefox.xpi",
-        "distFolder": "build"
       }
     ],
     "publish": [
@@ -101,9 +96,6 @@
         "assets": [
           {
             "path": "cis-enhancement-suite_chrome.zip"
-          },
-          {
-            "path": "cis-enhancement-suite_firefox.xpi"
           }
         ]
       }
@@ -145,7 +137,6 @@
     "rimraf": "2.6.3",
     "semantic-release": "15.13.3",
     "semantic-release-chrome": "1.1.0",
-    "semantic-release-firefox": "1.2.0",
     "source-map-loader": "0.2.4",
     "typescript": "3.3.4000",
     "web-ext-types": "3.1.0",
