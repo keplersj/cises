@@ -16,5 +16,23 @@ describe("Rate My Professors", () => {
 
       expect(response).toEqual({});
     });
+
+    it("uses fetch to get data from the Rate My Professors backend", async () => {
+      let query = "";
+
+      fetchMock.mockImplementationOnce((fetchQuery: string) => {
+        query = fetchQuery;
+
+        fetchMock.mockResponseOnce("noCB({ response: { docs: [{}] } })");
+
+        return fetchMock(fetchQuery);
+      });
+
+      await rmp.getProfessorFromSchool("Teacher Name", "School Name");
+
+      expect(fetchMock).toHaveBeenCalled();
+      expect(query).not.toEqual("");
+      expect(query).toMatchSnapshot();
+    });
   });
 });
