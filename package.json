@@ -106,8 +106,8 @@
     "@emotion/styled": "10.0.10",
     "emotion": "10.0.9",
     "query-string": "6.4.2",
-    "react": "16.8.5",
-    "react-dom": "16.8.5"
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "@babel/core": "7.4.0",
@@ -133,7 +133,7 @@
     "jest-fetch-mock": "2.1.1",
     "lint-staged": "8.1.5",
     "prettier": "1.16.4",
-    "react-test-renderer": "16.8.5",
+    "react-test-renderer": "16.8.6",
     "rimraf": "2.6.3",
     "semantic-release": "15.13.3",
     "semantic-release-chrome": "1.1.0",
