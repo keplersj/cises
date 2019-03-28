@@ -90,3 +90,4 @@ dist/
 build/
 web-ext-artifacts/
 reports/
+.stryker-tmp/
