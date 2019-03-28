@@ -12,7 +12,7 @@ jobs:
         - commitlint-travis
     - stage: test
       script:
-        - npm test
+        - npm test && npx stryker run
       after_success:
         - bash <(curl -s https://codecov.io/bash)
     - stage: release
