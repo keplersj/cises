@@ -41,20 +41,14 @@ async function renderProfInfoInModal() {
 }
 
 const bodyObserver = new MutationObserver(mutationsList => {
-  for (var mutation of mutationsList) {
-    if (mutation.type == "childList") {
-      mutation.addedNodes.forEach(async node => {
-        if ((node as Element).id === "base-modal") {
-          await renderProfInfoInModal();
-        }
-      });
-    }
-  }
+  mutationsList.forEach(mutation => {
+    Array.from(mutation.addedNodes.values())
+      .filter(node => (node as Element).id === "base-modal")
+      .forEach(renderProfInfoInModal);
+  });
 });
 
 // Start observing the target node for configured mutations
 bodyObserver.observe(document.body, {
-  attributes: false,
-  childList: true,
-  subtree: false
+  childList: true
 });
