@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 interface Props {
   rmpId: number;
   rating: number;
-  tags: string[];
+  tags?: string[];
 }
 
 const Container = styled.div`
@@ -54,12 +54,16 @@ export const ScheduleBuilderRMP = ({ rmpId, rating, tags }: Props) => (
     <strong>Average Rating: </strong>
     <span>{rating}</span>
     <br />
-    <strong>Tags:</strong>
-    <br />
-    <TagContainer>
-      {tags.map((tag, index) => (
-        <Tag key={index}>{tag}</Tag>
-      ))}
-    </TagContainer>
+    {tags && (
+      <>
+        <strong>Tags:</strong>
+        <br />
+        <TagContainer>
+          {tags.map((tag, index) => (
+            <Tag key={index}>{tag}</Tag>
+          ))}
+        </TagContainer>
+      </>
+    )}
   </Container>
 );
