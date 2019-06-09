@@ -103,7 +103,7 @@
   },
   "dependencies": {
     "@emotion/core": "10.0.10",
-    "@emotion/styled": "10.0.11",
+    "@emotion/styled": "10.0.12",
     "emotion": "10.0.9",
     "query-string": "6.4.2",
     "react": "16.8.6",
