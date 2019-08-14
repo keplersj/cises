@@ -126,7 +126,7 @@
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0",
-    "rimraf": "^2.6.3",
+    "rimraf": "^2.7.0",
     "semantic-release": "^15.13.21",
     "semantic-release-chrome": "^1.1.1",
     "source-map-loader": "^0.2.4",
