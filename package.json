@@ -130,7 +130,7 @@
     "semantic-release": "^15.13.24",
     "semantic-release-chrome": "^1.1.1",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.5.3",
+    "typescript": "^3.6.2",
     "web-ext-types": "^3.2.1",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
