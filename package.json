@@ -90,7 +90,7 @@
     ]
   },
   "dependencies": {
-    "@emotion/core": "^10.0.17",
+    "@emotion/core": "^10.0.20",
     "@emotion/styled": "^10.0.17",
     "emotion": "^10.0.17",
     "query-string": "^6.8.3",
