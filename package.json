@@ -127,7 +127,7 @@
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.11.0",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.13.27",
+    "semantic-release": "^15.13.28",
     "semantic-release-chrome": "^1.1.1",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.6.4",
