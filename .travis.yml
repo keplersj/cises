@@ -15,14 +15,14 @@ jobs:
         - npm test && npx stryker run
       after_success:
         - bash <(curl -s https://codecov.io/bash)
-    - stage: release
-      script:
-        - webpack
-        - semantic-release
-      after_sucess: skip
+#     - stage: release
+#       script:
+#         - webpack
+#         - semantic-release
+#       after_sucess: skip
 
 stages:
   - lint
   - test
-  - name: release
-    if: branch = master AND type = push AND fork = false
+#   - name: release
+#     if: branch = master AND type = push AND fork = false
