@@ -118,7 +118,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^24.9.0",
     "copy-webpack-plugin": "^5.1.1",
-    "husky": "^4.0.6",
+    "husky": "^4.0.7",
     "jest": "^24.9.0",
     "jest-emotion": "^10.0.27",
     "jest-environment-jsdom-fourteen": "^1.0.1",
