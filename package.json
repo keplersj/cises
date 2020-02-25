@@ -123,7 +123,7 @@
     "jest-emotion": "^10.0.27",
     "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-fetch-mock": "^3.0.1",
-    "lint-staged": "^10.0.7",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.12.0",
     "rimraf": "^3.0.2",
