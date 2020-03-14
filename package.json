@@ -120,7 +120,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "jest-emotion": "^10.0.27",
+    "jest-emotion": "^10.0.32",
     "jest-environment-jsdom-fourteen": "^1.0.1",
     "jest-fetch-mock": "^3.0.3",
     "lint-staged": "^10.0.8",
