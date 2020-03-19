@@ -94,7 +94,7 @@
     "@emotion/styled": "^10.0.27",
     "emotion": "^10.0.27",
     "query-string": "^6.11.1",
-    "react": "^16.13.0",
+    "react": "^16.13.1",
     "react-dom": "^16.13.0"
   },
   "devDependencies": {
